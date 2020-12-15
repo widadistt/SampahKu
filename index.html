@@ -58,7 +58,7 @@
 
         function getLandfills() {
 
-            fetch('http://localhost/sampahku/landfills')
+            fetch('https://sampahku-api.herokuapp.com/posts/landfills')
             .then(function (res) {
                 return res.json();
             })
@@ -84,7 +84,7 @@
 
         function getWastes() {
 
-            fetch('http://localhost/sampahku/wastes')
+            fetch('https://sampahku-api.herokuapp.com/wastes')
                 .then(function (res) {
                     return res.json();
                 })
@@ -107,7 +107,7 @@
 
         function getPosts() {
 
-            fetch('http://localhost/sampahku/posts')
+            fetch('https://sampahku-api.herokuapp.com/posts/')
                 .then((res) => { return res.json() })
                 .then((data) => {
                     let result = `<h2 class="w3-center w3-allerta w3-xxlarge"> Random User Info From Jsonplaceholder API</h2>`;
