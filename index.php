@@ -16,7 +16,7 @@
     // Enter your Client Secrect
     $client->setClientSecret('B3Vi6wN9DhLV2wnjWttx_HSx');
     // Enter the Redirect URL
-    $client->setRedirectUri('http://localhost/SampahKu/login.php');
+    $client->setRedirectUri('https://sampahku.herokuapp.com/login.php');
 
     // Adding those scopes which we want to get (email & profile Information)
     $client->addScope("email");
@@ -103,7 +103,7 @@
         <h1 class="w3-center w3-allerta w3-xxlarge">Manage your trash carefully, live wisely</h1>
         <p class="w3-center w3-small"> 18218011 | Widad Istiqomah </p>
         <p>
-            <input type="submit" value="Home" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/index.php'">
+            <input type="submit" value="Home" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/index.php'">
             <input type="submit" value="Landfills" id="getLandfills" class="w3-btn w3-blue w3-margin" >
             <input type="submit" value="Wastes" id="getWastes" class="w3-btn w3-blue w3-margin" >
             <input type="submit" value="Posts" id="getPosts" class="w3-btn w3-blue w3-margin">
@@ -141,8 +141,8 @@
 
         function getLandfills() {
 
-            // fetch('https://sampahku-api.herokuapp.com/landfills')
-            fetch('http://localhost/sampahku-api/landfills')
+            fetch('https://sampahku-api.herokuapp.com/landfills')
+            // fetch('http://localhost/sampahku-api/landfills')
             .then(function (res) {
                 return res.json();
             })
@@ -174,8 +174,8 @@
 
         function getWastes() {
 
-            // fetch('https://sampahku-api.herokuapp.com/wastes')
-            fetch('http://localhost/sampahku-api/wastes')
+            fetch('https://sampahku-api.herokuapp.com/wastes')
+            // fetch('http://localhost/sampahku-api/wastes')
                 .then(function (res) {
                     return res.json();
                 })
@@ -200,8 +200,8 @@
 
         function getPosts() {
 
-            // fetch('https://sampahku-api.herokuapp.com/posts')
-            fetch('http://localhost/sampahku-api/posts')
+            fetch('https://sampahku-api.herokuapp.com/posts')
+            // fetch('http://localhost/sampahku-api/posts')
                 .then((res) => { return res.json() })
                 .then((data) => {
                     let result = `<h2 class="w3-center w3-allerta w3-xxlarge"> Latest Post for You </h2>`;

@@ -44,11 +44,11 @@
         <p class="w3-center"> 18218011 | Widad Istiqomah </p>
         <p class="w3-center w3-small"><?php echo "Hi ", $user['name'], " | ", $user['email'], "!";?></p>
         <p>
-            <input type="submit" value="Home" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/home.php'">
-            <input type="submit" value="Landfills" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/landfills.php'";>
-            <input type="submit" value="Wastes" id="getWastes" class="w3-btn w3-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/wastes.php'">
-            <input type="submit" value="Posts" id="getPosts" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/posts.php'">
-            <input type="submit" value="Log out" class="w3-btn w3-blue w3-margin login-btn" onclick="location.href = 'http://localhost/SampahKu/logout.php'">
+            <input type="submit" value="Home" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/home.php'">
+            <input type="submit" value="Landfills" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/landfills.php'";>
+            <input type="submit" value="Wastes" id="getWastes" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/wastes.php'">
+            <input type="submit" value="Posts" id="getPosts" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/posts.php'">
+            <input type="submit" value="Log out" class="w3-btn w3-blue w3-margin login-btn" onclick="location.href = 'https://sampahku.herokuapp.com/logout.php'">
         </p>
         <hr>
 
@@ -58,8 +58,8 @@
 
         <div id="result" class="w3-container content">
             <script>
-                // fetch('https://sampahku-api.herokuapp.com/posts')
-                fetch('http://localhost/sampahku-api/posts')
+                fetch('https://sampahku-api.herokuapp.com/posts')
+                // fetch('http://localhost/sampahku-api/posts')
                     .then((res) => { return res.json() })
                     .then((data) => {
                         let result = `<h2 class="w3-center w3-allerta w3-xxlarge"> Latest Post for You </h2>`;
@@ -114,8 +114,8 @@
         
         function getPosts() {
 
-            // fetch('https://sampahku-api.herokuapp.com/posts')
-            fetch('http://localhost/sampahku-api/posts')
+            fetch('https://sampahku-api.herokuapp.com/posts')
+            // fetch('http://localhost/sampahku-api/posts')
                 .then((res) => { return res.json() })
                 .then((data) => {
                     let result = `<h2 class="w3-center w3-allerta w3-xxlarge"> Latest Post for You </h2>`;
@@ -149,7 +149,7 @@
 
             ((title || writer) || content) === "" ?
             alert('Please enter all details') :
-            fetch('http://localhost/sampahku-api/posts', {
+            fetch('https://sampahku-api.herokuapp.com/posts', {
                 method: 'POST',
                 headers: new Headers(),
                 body: JSON.stringify({ title: title, writer: writer, content: content })
@@ -175,7 +175,7 @@
 
             // DELETE waste
             if (delClicked) {
-                fetch(`http://localhost/sampahku-api/posts/${id}`, {
+                fetch(`https://sampahku-api.herokuapp.com/posts/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -196,7 +196,7 @@
             btnSubmit.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                fetch(`http://localhost/sampahku-api/posts/${id}`, {
+                fetch(`https://sampahku-api.herokuapp.com/posts/${id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'

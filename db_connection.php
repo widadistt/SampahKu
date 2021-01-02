@@ -13,6 +13,7 @@
 
     $db = parse_url(getenv("postgres://tsksabxokdawqm:03f55d605a04fa4d25ee18b978c211953141532f2196333a6a7ed0e4862d0744@ec2-52-201-55-4.compute-1.amazonaws.com:5432/d4h2ac7l9anakb"));
     $db["path"] = ltrim($db["path"], "/");
+    
     // CHECK DATABASE CONNECTION
     if(mysqli_connect_errno()){
         echo "Connection Failed".mysqli_connect_error();

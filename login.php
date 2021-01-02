@@ -16,7 +16,7 @@
     // Enter your Client Secrect
     $client->setClientSecret('B3Vi6wN9DhLV2wnjWttx_HSx');
     // Enter the Redirect URL
-    $client->setRedirectUri('http://localhost/SampahKu/login.php');
+    $client->setRedirectUri('https://sampahku.herokuapp.com/login.php');
 
     // Adding those scopes which we want to get (email & profile Information)
     $client->addScope("email");

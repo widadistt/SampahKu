@@ -45,11 +45,11 @@
         <p class="w3-center"> 18218011 | Widad Istiqomah </p>
         <p class="w3-center w3-small"><?php echo "Hi ", $user['name'], " | ", $user['email'], "!";?></p>
         <p>
-            <input type="submit" value="Home" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/home.php'">
-            <input type="submit" value="Landfills" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/landfills.php'">
-            <input type="submit" value="Wastes" id="getWastes" class="w3-btn w3-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/wastes.php'">
-            <input type="submit" value="Posts" id="getPosts" class="w3-btn w3-blue w3-margin" onclick="location.href = 'http://localhost/SampahKu/posts.php'">
-            <input type="submit" value="Log out" class="w3-btn w3-blue w3-margin login-btn" onclick="location.href = 'http://localhost/SampahKu/logout.php'">
+            <input type="submit" value="Home" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/home.php'">
+            <input type="submit" value="Landfills" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/landfills.php'">
+            <input type="submit" value="Wastes" id="getWastes" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/wastes.php'">
+            <input type="submit" value="Posts" id="getPosts" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/posts.php'">
+            <input type="submit" value="Log out" class="w3-btn w3-blue w3-margin login-btn" onclick="location.href = 'https://sampahku.herokuapp.com/logout.php'">
         </p>
         <hr>
 
@@ -82,8 +82,8 @@
 
         function getLandfills() {
 
-            // fetch('https://sampahku-api.herokuapp.com/landfills')
-            fetch('http://localhost/sampahku-api/landfills')
+            fetch('https://sampahku-api.herokuapp.com/landfills')
+            // fetch('http://localhost/sampahku-api/landfills')
             .then(function (res) {
                 return res.json();
             })
@@ -116,8 +116,8 @@
 
         function getWastes() {
 
-            // fetch('https://sampahku-api.herokuapp.com/wastes')
-            fetch('http://localhost/sampahku-api/wastes')
+            fetch('https://sampahku-api.herokuapp.com/wastes')
+            // fetch('http://localhost/sampahku-api/wastes')
                 .then(function (res) {
                     return res.json();
                 })
@@ -142,8 +142,8 @@
 
         function getPosts() {
 
-            // fetch('https://sampahku-api.herokuapp.com/posts')
-            fetch('http://localhost/sampahku-api/posts')
+            fetch('https://sampahku-api.herokuapp.com/posts')
+            // fetch('http://localhost/sampahku-api/posts')
                 .then((res) => { return res.json() })
                 .then((data) => {
                     let result = `<h2 class="w3-center w3-allerta w3-xxlarge"> Latest Post for You </h2>`;
@@ -175,7 +175,7 @@
 
             ((name || address) || phone) === "" ?
             alert('Please enter all details') :
-            fetch('http://localhost/sampahku-api/landfills', {
+            fetch('https://sampahku-api.herokuapp.com/landfills', {
                 method: 'POST',
                 headers: new Headers(),
                 body: JSON.stringify({ name: name, phone_number: phone, address: address })
