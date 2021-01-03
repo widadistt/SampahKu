@@ -101,7 +101,7 @@
 <body>
     <div class="w3-container">
         <h1 class="w3-center w3-allerta w3-xxlarge">Manage your trash carefully, live wisely</h1>
-        <p class="w3-center w3-small"> 18218011 | Widad Istiqomah </p>
+        <p class="w3-center w3-small"> By 18218011 | Widad Istiqomah </p>
         <p>
             <input type="submit" value="Home" class="w3-btn w3-white w3-border w3-border-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/index.php'">
             <input type="submit" value="Landfills" id="getLandfills" class="w3-btn w3-blue w3-margin" >

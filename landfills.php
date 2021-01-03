@@ -42,7 +42,7 @@
 <body>
     <div class="w3-container">
         <h1 class="w3-center w3-allerta w3-xxlarge">Manage your trash carefully, live wisely</h1>
-        <p class="w3-center"> 18218011 | Widad Istiqomah </p>
+        <p class="w3-center"> By 18218011 | Widad Istiqomah </p>
         <p class="w3-center w3-small"><?php echo "Hi ", $user['name'], " | ", $user['email'], "!";?></p>
         <p>
             <input type="submit" value="Home" id="getLandfills" class="w3-btn w3-blue w3-margin" onclick="location.href = 'https://sampahku.herokuapp.com/home.php'">
