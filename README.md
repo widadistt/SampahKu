@@ -4,4 +4,4 @@ SampahKu is a website that comunicate with RESTful API named sampahku-api. This 
 ### Usage
 + Clone this repository
 + Deploy on your site locally or globally online
-+ Open home.php file
++ Go to home.php
